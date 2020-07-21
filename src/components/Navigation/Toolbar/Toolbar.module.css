@@ -1,0 +1,63 @@
+.ToolbarWrapper{
+    padding: 0 10px;
+    width: 1200px;
+    height: 56px;
+    max-width: 1200px;
+    margin: auto auto;
+}
+
+.Toolbar {
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-bottom:2px solid #662683;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.Toolbar nav {
+    height: 100%;
+    float: right;
+}
+
+.Toolbar .Logo {
+    height: 80%;
+    padding:10px;
+}
+
+.Toolbar img {
+    height: 30px;
+    padding:10px;
+}
+
+@media (max-width: 499px) {
+    .DesktopOnly {
+        display: none;
+    }
+    .ToolbarWrapper{
+        width: 1200px;
+        height: 56px;
+        max-width: 1200px;
+        margin: auto auto;
+    }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 766px) {
+/* smartphones, iPhone, portrait 480x320 phones */ 
+.ToolbarWrapper{
+    padding: 0 10px;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    margin: none;
+}
+}

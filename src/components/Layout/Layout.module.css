@@ -1,0 +1,8 @@
+.Content{
+    color:#333;
+    margin: auto;
+    margin-top: 80px;
+    border: 1px solid red;
+    max-width: 1200px;
+    padding: 0 10px;
+}

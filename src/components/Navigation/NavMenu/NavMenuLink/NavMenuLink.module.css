@@ -1,0 +1,45 @@
+.NavMenuLink {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+
+.NavMenuLink a {
+    color: #662683;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavMenuLink a:hover,
+.NavMenuLink a:active,
+.NavMenuLink a.active {
+    color: #40A4C8;
+}
+
+@media (min-width: 500px) {
+    .NavMenuLink {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+    }
+    
+    .NavMenuLink a {
+        color: #662683;
+        height: 100%;
+        padding: 16px 10px;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .NavMenuLink a:hover,
+    .NavMenuLink a:active,
+    .NavMenuLink a.active {
+        background-color: #662683;
+        border-bottom: 2px solid #e40612;
+        color: white;
+    }
+}
