@@ -9,19 +9,10 @@ class App extends Component{
       <div>
       <Layout>
         <h3>KindyRock Videos</h3>
+        <BurgerBuilder/>
       </Layout>
     </div>
     );
-
-    /*
-    return(
-      <div>
-        <Layout>
-          <BurgerBuilder/>
-        </Layout>
-      </div>
-    );
-    */
   }
 }
 

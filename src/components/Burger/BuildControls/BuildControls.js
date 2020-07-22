@@ -4,18 +4,27 @@ import BuildControl from './BuildControl/BuildControl';
 import classes from './BuildControls.module.css';
 
 const controls = [
-    {label: 'Salad', type:'salad'},
+    /*{label: 'Salad', type:'salad'},
     {label: 'Bacon', type:'bacon'},
     {label: 'Meat', type:'meat'},
     {label: 'Cheese', type:'cheese'}
+    */
+    {label: 'Babies', type:'babies'},
+    {label: 'Toddlers', type:'toddlers'},
+    {label: 'Pre-Schoolers', type:'preschoolers'},
+    {label: 'Young Children', type:'youngchildren'},
 ];
 
 //functional component that recieves props and returns jsx
 //access the object above
+
+/*
+-- Add or remove video categories
+*/
 const buildControls = (props) => (
     
     <div className={styles.BuildControls}>
-        <p>Current price: <strong>${props.price.toFixed(2)}</strong></p>
+        <h3>Category selection</h3>
         {controls.map(ctrl => (
             <BuildControl 
                 key={ctrl.label}
@@ -30,6 +39,12 @@ const buildControls = (props) => (
         onClick={props.ordered}>
             Order NOW
         </button>
+
+        <div>
+                    <h2>Testing data</h2>
+                    <p>Loop through state data</p>
+                </div>
+
     </div>
 );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import styles from './Burger.module.css';
 import BurgerIngredient from '../../containers/BurgerBuilder/BurgerIngredient/BurgerIngredient';
 
@@ -22,20 +23,34 @@ const burger = (props) => {
         return arr.concat(el)
     },[]);
 
+
     if (transformedIngredients.length === 0){
-        transformedIngredients = <p>Please start adding ingredients!</p>
+        //transformedIngredients = <p>Video placeholder</p>
+        transformedIngredients =  '<iframe src="https://player.vimeo.com/video/440258389" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe><iframe src="https://player.vimeo.com/video/440258389" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe><iframe src="https://player.vimeo.com/video/440258389" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
     }
 
     //to solve the problem of 0 ingredients - empty arrays
     //salad: 0, bacon: 0,
     //(4) [Array(0), Array(0), Array(0), Array(0)]
-    console.log(transformedIngredients);
+    //console.log(transformedIngredients);
+
+
+    //<BurgerIngredient type="bread-top" />
+    //<BurgerIngredient type="bread-bottom" />
+
+    //{transformedIngredients}
+    // {ReactHtmlParser(transformedIngredients)}
+    //<div className={styles.Burger}>
+
+    /*
+        <BurgerIngredient type="bread-top" />
+        <BurgerIngredient type="bread-bottom" />
+        <BurgerIngredient type="meat" />
+    */
 
     return (
-        <div className={styles.Burger}>
-            <BurgerIngredient type="bread-top" />
-            {transformedIngredients}
-            <BurgerIngredient type="bread-bottom" />
+        <div className={styles.VideoWrapper}>
+            <BurgerIngredient type="all-videos" />
         </div>
     )
 }

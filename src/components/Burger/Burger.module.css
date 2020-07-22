@@ -8,6 +8,20 @@
     font-size: 1.2rem;
 }
 
+.VideoWrapper{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    display: flex;
+    overflow-y: scroll;
+}
+.VideoWrapper iframe{
+    margin: 10px;
+    min-width: 640px;
+    width: 640px;
+    border:1px solid red;
+}
+
 @media (min-width: 500px) and (min-height: 400px){
     .Burger{
         width: 350px;

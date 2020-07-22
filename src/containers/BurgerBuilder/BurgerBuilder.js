@@ -21,22 +21,64 @@ const INGREDIENT_PRICES = {
 
 class BurgerBuilder extends Component {
 
-    //This was stateless
-    /*
-    render() {
-        return (
-            <Aux>
-                <Burger />
-                <div>Controls</div>
-            </Aux>
-        );
-    }
-    */
-
     //Adding state to make the burger and controls dynamic
     //modern way of adding state
     state = {
         //add objects
+
+        /*
+        In this state we will need to get the user/member details
+        -- shown on settings and signup page
+        */
+
+        member:{
+            member_id: 3128,
+            member_name: "Mummy",
+            member_email_address: "mummy@gmail.com"
+        },
+        audience:{
+            child_id: 97624,
+            child_name: "Peter",
+            child_age: "3",
+            favourite_videos:{
+                videolist: [
+                    {vimeo_id: 440258389,
+                        name: "Jack in the box",
+                        Description: "Video desc...",
+                        AgeGroup: "Baby",
+                        Type: "Learn",
+                        ThumbnailFilename: "Jack-in-the-Box-Thumb.jpg"},
+                    {vimeo_id: 440258389,
+                        Name: "Jack in the box",
+                        Description: "Video desc...",
+                        AgeGroup: "Baby",
+                        Type: "Learn",
+                        ThumbnailFilename: "Jack-in-the-Box-Thumb.jpg"}
+                ]
+            }
+        },
+        videos: {
+            vimeolist: [
+                {vimeo_id: 440258389,
+                    name: "Jack in the box",
+                    Description: "Video desc...",
+                    AgeGroup: "Baby",
+                    Type: "Learn",
+                    ThumbnailFilename: "Jack-in-the-Box-Thumb.jpg"},
+                {vimeo_id: 440259304,
+                    Name: "Jiggle Your Scarfe",
+                    Description: "Video desc...",
+                    AgeGroup: "Baby",
+                    Type: "Learn",
+                    ThumbnailFilename: "Jiggle-Your-Scarf-Thumbnail.jpg"},
+                {vimeo_id: 440282888,
+                    Name: "Jump in the Puddles",
+                    Description: "Video desc...",
+                    AgeGroup: "Baby",
+                    Type: "Learn",
+                    ThumbnailFilename: "Jump-in-the-puddles-TNL.jpg"}
+            ]
+          },
         ingredients:{
             salad: 0,
             bacon: 0,
@@ -50,19 +92,16 @@ class BurgerBuilder extends Component {
         //cannot just map it to loop through it.
     }
 
-    //Add new method / helper method
+
+        //Add new method / helper method
     //tells if the burger can be purchased
     updatePurchaseState(ingredients){
-        /*const ingredients = {
-            ...this.state.ingredients
-        };*/
-
         //console.log("this.state.ingredients" + this.state.ingredients);
-
         //turn the above object values: salad price etc into an array
         const sum = Object.keys(ingredients).map(igkey => {
             return ingredients[igkey];
         })
+
         //this will flatten the array to return a single number
         .reduce((sum, el) => {
             return sum +el;
@@ -72,7 +111,7 @@ class BurgerBuilder extends Component {
         console.log("purchaseable" + this.state.purchaseable);
     }
 
-    //Add method for adding state to form controls
+    //Methods for adding state to form controls
     /// ... ES6 spead operator to distribute the properies of the old state
     addIngredientHandler = (type) => {
         const oldCount  = this.state.ingredients[type];
@@ -149,7 +188,10 @@ class BurgerBuilder extends Component {
                     purchaseable={this.state.purchaseable}
                     ordered={this.purchaseHandler}
                     price={this.state.totalPrice}
-                    />
+                />
+                <div>
+                <p>Member: {this.state.member.member_name}</p>
+                </div>
             </Aux>
         );
     }
