@@ -8,7 +8,7 @@
     font-size: 1.2rem;
 }
 
-.VideoWrapper{
+.VideoWrapper,.videoPostsWrapper{
     width: 100%;
     margin:auto;
     text-align: center;

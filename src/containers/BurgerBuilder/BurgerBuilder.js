@@ -1,4 +1,6 @@
 import React, {Component}  from 'react';
+import axios from 'axios';
+
 /* Layouts */
 import Aux from '../../hoc/Aux';
 import Modal from '../../components/UI/Modal/Modal';
@@ -8,7 +10,9 @@ import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
-//import { object } from 'prop-types';
+//Import video player component to load up videos
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import style from '../BurgerBuilder/BurgerBuilder.module.css'
 
 //all caps is for global constants
 //prices for each ing
@@ -87,13 +91,34 @@ class BurgerBuilder extends Component {
         },
         totalPrice: 0,
         purchaseable: false,
-        purchasing: false
+        purchasing: false,
+        posts: []
         //want to pass the above object (not array) to the burger- 
         //cannot just map it to loop through it.
     }
+    
+    componentDidMount () {
+        //https://website5.sdstesting.com.au/sample-videos.json
+        //https://jsonplaceholder.typicode.com/posts
+        axios.get( 'https://website5.sdstesting.com.au/webservice/demo-service.php' )
+            .then( response => {
+                const posts = response.data.slice(0, 8);
+                const updatedPosts = posts.map(post => {
+                    return {
+                        ...post,
+                        author: 'Max'
+                    }
+                });
+                this.setState({posts: updatedPosts});
+                // console.log( response );
+            } )
+            .catch(error => {
+                // console.log(error);
+                this.setState({error: true});
+            });
+    }
 
-
-        //Add new method / helper method
+    //Add new method / helper method
     //tells if the burger can be purchased
     updatePurchaseState(ingredients){
         //console.log("this.state.ingredients" + this.state.ingredients);
@@ -166,8 +191,23 @@ class BurgerBuilder extends Component {
         const disableInfo = {
             ...this.state.ingredients
         };
+
         for (let key in disableInfo){
             disableInfo[key] = disableInfo[key] <= 0
+        }
+    
+        let posts = <p style={{textAlign: 'center'}}>Something went wrong!</p>;
+        if (!this.state.error) {
+            posts = this.state.posts.map(post => {
+                return <VideoPlayer 
+                    key={post.id}
+                    /*userid={post.id}
+                    title={post.title}/>*/
+                    vimeo_id={post.vimeo_id}
+                    name={post.name}
+                    age_group={post.description}
+                    type={post.reg_date} />;
+            });
         }
 
         return (
@@ -191,6 +231,9 @@ class BurgerBuilder extends Component {
                 />
                 <div>
                 <p>Member: {this.state.member.member_name}</p>
+                </div>
+                <div className={style.videoPostsWrapper}>
+                {posts}
                 </div>
             </Aux>
         );

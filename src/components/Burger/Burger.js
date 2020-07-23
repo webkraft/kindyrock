@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+//import ReactHtmlParser from 'react-html-parser';
 import styles from './Burger.module.css';
 import BurgerIngredient from '../../containers/BurgerBuilder/BurgerIngredient/BurgerIngredient';
 

@@ -40,7 +40,7 @@ const buildControls = (props) => (
             Order NOW
         </button>
 
-        <div>
+            <div>
                     <h2>Testing data</h2>
                     <p>Loop through state data</p>
                 </div>

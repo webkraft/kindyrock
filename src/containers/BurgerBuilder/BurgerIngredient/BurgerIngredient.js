@@ -26,12 +26,12 @@ class BurgerIngredient extends Component{
 
     render (){
 
-    let videoList = [
+    /*let videoList = [
         {"title": "Movie 1", "vimeoid": "440258389", "agegroup": "Baby"},
         {"title": "Movie 2", "vimeoid": "440259304", "agegroup": "Toddler"},
         {"title": "Movie 3", "vimeoid": "440282888", "agegroup": "Pre school"},
         {"title": "Movie 4", "vimeoid": "111222333", "agegroup": "Baby"}
-    ]
+    ]*/
 
     let ingredient = null;
 
