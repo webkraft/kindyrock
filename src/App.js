@@ -1,6 +1,6 @@
 import React, {Component}  from 'react';
 import Layout from './components/Layout/Layout';
-import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
+import MainInterfaceBuilder from './containers/MainInterfaceBuilder/MainInterfaceBuilder';
 
 class App extends Component{
   render(){
@@ -8,7 +8,7 @@ class App extends Component{
     return(
       <div>
       <Layout>
-        <BurgerBuilder/>
+        <MainInterfaceBuilder/>
       </Layout>
     </div>
     );
@@ -16,5 +16,4 @@ class App extends Component{
 }
 
 export default App;
-
 //<h3>KindyRock Videos</h3>

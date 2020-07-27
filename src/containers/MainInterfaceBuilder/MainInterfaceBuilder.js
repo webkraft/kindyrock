@@ -7,16 +7,16 @@ import Modal from '../../components/UI/Modal/Modal';
 
 /* Comps/Logic */
 //import Burger from '../../components/Burger/Burger';
-import BuildControls from '../../components/Burger/BuildControls/BuildControls';
-import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
+import BuildControls from '../../components/MainInterface/BuildControls/BuildControls';
+import OrderSummary from '../../components/MainInterface/OrderSummary/OrderSummary';
 
 //Import video player component to load up videos
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import VideoModal from '../../components/UI/VideoModal/VideoModal';
 //import VideoBackground from '../../components/VideoPlayer/VideoBackground/VideoBackground';
-import style from '../BurgerBuilder/BurgerBuilder.module.css'
+import style from '../MainInterfaceBuilder/MainInterfaceBuilder.module.css'
 
-class BurgerBuilder extends Component {
+class MainInterfaceBuilder extends Component {
 
     //Adding state to make the burger and controls dynamic
     //modern way of adding state
@@ -273,4 +273,4 @@ class BurgerBuilder extends Component {
 */
 
 ////purchasing={this.state.purchasing}
-export default BurgerBuilder;
+export default MainInterfaceBuilder;

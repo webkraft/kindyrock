@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 //import { checkPropTypes } from 'prop-types';
 import PropTypes from 'prop-types';
-import styles from './BurgerIngredient.module.css';
+import styles from './MainInterfaceBuilderComp.module.css';
 
 //Burger ingredient is like the video ingredient - change ingredient with video
-class BurgerIngredient extends Component{
+class MainInterfaceBuilderComp extends Component{
 
     /*
     -- this adds the divs with styles to the burger ingredients
@@ -86,8 +86,8 @@ class BurgerIngredient extends Component{
     }
 }
 
-BurgerIngredient.propTypes  = {
+MainInterfaceBuilderComp.propTypes  = {
     type: PropTypes.string.isRequired
 }
 
-export default BurgerIngredient;
+export default MainInterfaceBuilderComp;

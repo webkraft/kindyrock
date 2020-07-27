@@ -1,7 +1,7 @@
 import React from 'react';
 //import ReactHtmlParser from 'react-html-parser';
-import styles from './Burger.module.css';
-import BurgerIngredient from '../../containers/BurgerBuilder/BurgerIngredient/BurgerIngredient';
+import styles from './MainInterface.module.css';
+import MainInterfaceBuilderComp from '../../containers/MainInterfaceBuilder/MainInterfaceBuilderComp/MainInterfaceBuilderComp'
 
 const burger = (props) => {
 
@@ -13,7 +13,7 @@ const burger = (props) => {
     .map(igKey => {
         //use spread method to make number of objects
             return[...Array(props.ingredients[igKey])].map((_, i) => {
-            return <BurgerIngredient key={igKey + i} type={igKey} />;
+            return <MainInterfaceBuilderComp key={igKey + i} type={igKey} />;
         });
     })
     //use reduce to flatten array
@@ -50,7 +50,7 @@ const burger = (props) => {
 
     return (
         <div className={styles.VideoWrapper}>
-            <BurgerIngredient type="all-videos" />
+            <MainInterfaceBuilderComp type="all-videos" />
         </div>
     )
 }
