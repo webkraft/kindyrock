@@ -1,3 +1,4 @@
+/*
 .BuildControls{
     width: 100%;
     background: white;
@@ -6,5 +7,15 @@
     align-items: center;
     margin: auto;
     padding: 0;
-    /*padding: 0 20px;*/
+}
+*/
+
+.BuildControlsWrapper{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: auto;
+    padding: 0px;
+    max-width: 1200px;
+    margin-bottom: 20px;
 }

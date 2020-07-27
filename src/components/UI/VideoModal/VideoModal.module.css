@@ -1,0 +1,60 @@
+@import "../../../../node_modules/video-react/dist/video-react.css";
+
+.VideoModal {
+    position: relative;
+    z-index: 500;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease-out;
+}
+
+.videoFrame{
+    width: 100%;
+}
+
+/*
+.VideoModalWrapper{
+    z-index: 510;
+    max-width:1200px;
+    width: 1200px;
+    background:red;
+    border:1px solid red;
+    height: 600px;
+    top: 30;
+    left: 30;
+}
+.VideoModal {
+    position: fixed;
+    z-index: 520;
+    background-color:none;
+    width: 100%;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 500px;
+        left: calc(50% - 250px);
+    }
+}
+*/

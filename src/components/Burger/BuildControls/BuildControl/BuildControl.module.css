@@ -1,30 +1,38 @@
 .BuildControl {
+    /*
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 5px 0;
+    */
+    display: block;
+    font: inherit;
+    padding: 5px;
+    margin: 0;
+    height: 100%;
+    width: 25%;
 }
 
 .BuildControl button {
     display: block;
     font: inherit;
-    padding: 5px;
-    margin: 0 5px;
-    width: 80px;
-    border: 1px solid #AA6817;
+    /*padding: 5px;
+    margin: 0 5px;*/
+    height: 100%;
+    width: 100%;
+    background-color:green;
     cursor: pointer;
     outline: none;
+    min-height: 300px;
 }
 
 .BuildControl button:disabled {
-    background-color: #AC9980;
     border: 1px solid #7E7365;
     color: #ccc;
     cursor: default;
 }
 
 .BuildControl button:hover:disabled {
-    background-color: #AC9980;
     color: #ccc;
     cursor: not-allowed;
 }
@@ -41,9 +49,36 @@
 }
 
 .BuildControl .More {
-    background-color: #8F5E1E;
-    color: white;
+    border:none;
 }
+
+.BuildControl .babies {
+    background-color: pink;
+    background: url(../../../../assets/Images/age-groups-babies.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BuildControl .toddlers {
+    background-color: green;
+    background: url(../../../../assets/Images/age-groups-toddlers.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BuildControl .preschoolers {
+    background: url(../../../../assets/Images/age-groups-preschoolers.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BuildControl .youngchildren {
+    background: url(../../../../assets/Images/age-groups-young-children.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .BuildControl .Less:hover, .BuildControl .Less:active {  
     background-color: #DAA972;
@@ -51,6 +86,8 @@
 }
 
 .BuildControl .More:hover,.BuildControl .More:active {
-    background-color: #99703F;
     color: white;
+    /*-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);*/
 }

@@ -1,0 +1,47 @@
+.TypeControl {
+    /*
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    */
+    display: block;
+    font: inherit;
+    padding: 5px;
+    margin: 0;
+    height: 100%;
+    width: 33%;
+}
+
+.TypeControl button {
+    display: block;
+    font: inherit;
+    /*padding: 5px;
+    margin: 0 5px;*/
+    height: 100%;
+    width: 100%;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    min-height: 300px;
+}
+
+.TypeControl .learn {
+    background-color: green;
+    background: url(../../../../assets/Images/video-type-learn.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.TypeControl .watch {
+    background: url(../../../../assets/Images/video-type-watch.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.TypeControl .listen {
+    background: url(../../../../assets/Images/video-type-listen.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

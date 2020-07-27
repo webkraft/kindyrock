@@ -8,7 +8,6 @@ class App extends Component{
     return(
       <div>
       <Layout>
-        <h3>KindyRock Videos</h3>
         <BurgerBuilder/>
       </Layout>
     </div>
@@ -17,3 +16,5 @@ class App extends Component{
 }
 
 export default App;
+
+//<h3>KindyRock Videos</h3>
